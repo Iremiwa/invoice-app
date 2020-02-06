@@ -1,0 +1,22 @@
+.testimonial-section {
+    background-color: lavender;
+   
+}
+
+.testimonials {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.testimonial-cards {
+    margin: 2em 10em 0 10em;
+}
+
+.client-image {
+    width: 100%;
+    margin: 0;
+}
+
+.card {
+    padding: 0;
+}

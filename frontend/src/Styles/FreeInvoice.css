@@ -1,0 +1,23 @@
+.form-container {
+    border: 1px solid lavender;
+    padding: 0;
+    border-radius: 10px;
+    margin: 2% 15%;
+}
+
+.header {
+    background-color: dodgerblue;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: midnightblue;
+
+}
+
+.invoice-form {
+    margin: 30px 80px 10px 80px;
+}
