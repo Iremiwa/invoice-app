@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../Styles/FreeInvoice.css';
 
 
-class InvoiceForm extends React.Component {
-  render() {
+const InvoiceForm = (props) => {
+  
     return (
       <React.Fragment>
         <div className="form-container">
@@ -14,11 +14,11 @@ class InvoiceForm extends React.Component {
           </div>
           
 
-          <form className="invoice-form">
+          <form className="invoice-form" >
             <div className="row">
               <div className="form-group col">
                 <div className="sm-2 my-1">
-                  <label for="inlineFormInputGroup">Invoice No.</label>
+                  <label>Invoice No.</label>
                   <div className="input-group mb-2">
                     <div className="input-group-prepend">
                       <div className="input-group-text">#</div>
@@ -26,19 +26,21 @@ class InvoiceForm extends React.Component {
                     <input
                       type="text"
                       className="form-control"
-                      id="inlineFormInputGroup"
                       placeholder="Invoice No"
+                      name="invoiceNo"
+                      onChange={props.onChange}
                     />
                   </div>
                 </div>
               </div>
 
               <div className="form-group col">
-                <label for="inlineFormInputGroup">Customer's Name</label>
+                <label>Customer's Name</label>
                 <input
                   type="text"
                   className="form-control"
-                  id="exampleFormControlInput1"
+                  name="name"
+                  onChange={props.onChange}
                 />
               </div>
             </div>
@@ -46,9 +48,10 @@ class InvoiceForm extends React.Component {
             <div className="form-group">
               <textarea
                 className="form-control"
-                id="exampleFormControlTextarea1"
                 rows="3"
                 placeholder="Description of Invoice"
+                name="invoiceDescription"
+                onChange={props.onChange}
               ></textarea>
             </div>
 
@@ -71,9 +74,11 @@ class InvoiceForm extends React.Component {
                     <textarea
                       className="form-control"
                       name="description"
-                      id="exampleFormControlTextarea1"
+    
                       rows="3"
                       placeholder="Item Description"
+                      name="itemDescription"
+                      onChange={props.onChange}
                     />
                   </td>
                   <td>
@@ -81,8 +86,10 @@ class InvoiceForm extends React.Component {
                       type="number"
                       className="form-control"
                       name="quantity"
-                      id="exampleFormControlInput1"
+  
                       placeholder="1"
+                      name="quantity"
+                      onChange={props.onChange}
                     />
                   </td>
                   <td>
@@ -90,7 +97,8 @@ class InvoiceForm extends React.Component {
                       type="text"
                       className="form-control"
                       name="unitPrice"
-                      id="exampleFormControlInput1"
+  
+                      onChange={props.onChange}
                     />
                   </td>
                   <td>
@@ -98,8 +106,9 @@ class InvoiceForm extends React.Component {
                       type="text"
                       className="form-control"
                       name="discount"
-                      id="exampleFormControlInput1"
+  
                       placeholder="0"
+                      onChange={props.onChange}
                     />
                   </td>
                   <td>
@@ -107,13 +116,13 @@ class InvoiceForm extends React.Component {
                       type="text"
                       className="form-control"
                       name="amount"
-                      id="exampleFormControlInput1"
+  
+                      onChange={props.onChange}
                     />
                   </td>
                   <td>
                     <FontAwesomeIcon
                       icon={faTrash}
-                      onClick={() => alert("deleted")}
                     />
                   </td>
                 </tr>
@@ -123,9 +132,16 @@ class InvoiceForm extends React.Component {
             <button
               type="button"
               className="btn btn-primary"
-              onClick={() => this.addNewItem()}
             >
               +New Item
+            </button>
+
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick = {props.generatePdf}
+            >
+              Generate Invoice
             </button>
             <hr />
           </form>
@@ -133,6 +149,6 @@ class InvoiceForm extends React.Component {
       </React.Fragment>
     );
   }
-}
+
 
 export default InvoiceForm;

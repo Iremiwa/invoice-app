@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/Navbar.css';
-import {Link, animateScroll as scroll} from 'react-scroll';
+import { Link } from 'react-scroll';
 
 function Navbar() {
     return(
@@ -16,21 +16,21 @@ function Navbar() {
                     <ul className="navbar-nav mr-auto">
                     <Link to="howItWorks" spy={true} smooth={true} offset={-70} duration={500}>
                         <li className="nav-item ">
-                            <a className="nav-link" href="#">How It Works</a>
+                            <a className="nav-link">How It Works</a>
                         </li>
                     </Link>
                     <Link to="testimonials" spy={true} smooth={true} offset={-70} duration={700}>
                         <li className="nav-item ">
-                            <a className="nav-link" href="#">Testimonials</a>
+                            <a className="nav-link" >Testimonials</a>
                         </li>
                     </Link>
                     <Link to="signUpForm" spy={true} smooth={true} offset={-70} duration={1000}>
                     <li className="nav-item ">
-                        <a className="nav-link" href="#">SignUp</a>
+                        <a className="nav-link">SignUp</a>
                     </li>
                     </Link>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">SignIn <span className="sr-only">(current)</span></a>
+                        <a className="nav-link">SignIn <span className="sr-only">(current)</span></a>
                     </li>
                     
                     
