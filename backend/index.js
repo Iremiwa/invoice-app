@@ -2,10 +2,22 @@ const express = require('express');
 const pdf = require('html-pdf');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-
+const mongoose = require('mongoose');
 const pdfTemplate = require('./documents');
 
+
 const app = express();
+
+require("dotenv").config();
+const url = process.env.ATLAS_URI;
+
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
+    () => {
+      console.log("MongoDB database connection established");
+    }
+  )
+  .catch(err => console.log(err));
+
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));

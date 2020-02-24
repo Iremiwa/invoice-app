@@ -66,6 +66,11 @@ module.exports = ({  name, invoiceNo, invoiceDescription, itemDescription, quant
              border-top: 2px solid #eee;
              font-weight: bold;
              }
+             h1{
+                text-align: center;
+                margin-bottom: 50px;
+                color: rgb(76, 79, 99);
+             }
              @media only screen and (max-width: 600px) {
              .invoice-box table tr.top table td {
              width: 100%;
@@ -82,18 +87,12 @@ module.exports = ({  name, invoiceNo, invoiceDescription, itemDescription, quant
        </head>
        <body>
           <div class="invoice-box">
+         
+            <h1>Instabill</h1>
+         
+          
              <table cellpadding="0" cellspacing="0">
-                <tr class="top">
-                   <td colspan="2">
-                      <table>
-                         <tr>
-                            <td class="title"><img  src="https://i2.wp.com/cleverlogos.co/wp-content/uploads/2018/05/reciepthound_1.jpg?fit=800%2C600&ssl=1"
-                               style="width:100%; max-width:156px;"></td>
-                             
-                         </tr>
-                      </table>
-                   </td>
-                </tr>
+                
                 <tr class="information">
                    <td colspan="2">
                       <table>
@@ -109,28 +108,20 @@ module.exports = ({  name, invoiceNo, invoiceDescription, itemDescription, quant
                    </td>
                 </tr>
                 <tr class="heading">
-                   <td>Bought items:</td>
-                   <td>Price</td>
+                   <td>Items Bought</td>
+                   <td>Quantity</td>
+                   <td>Unit Price</td>
+                   <td>Total Price</td>
                 </tr>
                 <tr class="item">
-                   <td>First item:</td>
-                   <td>${itemDescription}$</td>
-                </tr>
-                <tr class="item">
-                   <td>First item:</td>
-                   <td>${quantity}$</td>
-                </tr>
-                <tr class="item">
-                   <td>First item:</td>
-                   <td>${unitPrice}$</td>
-                </tr>
-                <tr class="item">
-                   <td>Second item:</td>
-                   <td>${amount}$</td>
+                   <td>${itemDescription}</td>
+                   <td>${quantity}</td>
+                   <td>${unitPrice}</td>
+                   <td>${amount}</td>
                 </tr>
              </table>
              <br />
-             <h1 class="justify-center">Total price: ${parseInt(amount)}$</h1>
+             <h2 class="justify-center">Amount Due: ${parseInt(amount)}$</h2>
           </div>
        </body>
     </html>
