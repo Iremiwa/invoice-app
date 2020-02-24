@@ -9,21 +9,56 @@ import { saveAs } from 'file-saver';
 class FreeInvoice extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            invoiceNo: 1,
-            name: '',
-            invoiceDescription: '',
-            itemDescription: '',
-            quantity: 0,
-            unitPrice: 0,
-            discount: 0,
-            amount: 0
-        }
-    }
-
-    handleChange = ({target: {value, name}}) => this.setState({[name] : value})
+         this.state = {
+             invoiceNo: "",
+             name: " ",
+             invoiceDescription: " ",
+             lineItems: [
+                 {
+                     itemDescription: " ",
+                     quantity: 0,
+                     unitPrice: 0,
+                     discount: 0,
+                     amount: 0
+                 }
+             ],
+             totalAmount: 0
+            
+         }
 
         
+    }
+
+
+    handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
+
+    // handleChange = (e) => {
+    //     if(["itemDescription", "quantity", "unitPrice", "discount", "amount"].includes(e.target.className)) {
+    //         let lineItems = [...this.state.lineItems]
+    //         lineItems[e.target.dataset.id][e.target.className] = e.target.value
+    //         this.setState({lineItems}, () => console.log(this.state.lineItems))
+    //     } else {
+    //         this.setState({ [e.target.name] : e.target.value })
+    //     }
+    // }
+
+    // addNewRow = (e) => {
+    //     alert('button clicked');
+    //     this.setState((prevState) => ({
+    //         lineItems: [...prevState.lineItems, {
+    //             itemDescription: '',
+    //                 quantity: 0,
+    //                 unitPrice: 0,
+    //                 discount: 0,
+    //                 amount: 0
+    //         }]
+    //     }));
+
+    //     console.log(this.state);
+    // }
+
+
+   
 
     handlegeneratePdf = () => {
         const formData = this.state;
@@ -40,7 +75,7 @@ class FreeInvoice extends Component {
     render() { 
         return (      
             <React.Fragment>
-                <InvoiceForm onChange = {this.handleChange} generatePdf = {this.handlegeneratePdf}/>
+                <InvoiceForm onChange = {this.handleChange} generatePdf = {this.handlegeneratePdf} newRow = {this.addNewRow} />
             </React.Fragment>
          );
     }

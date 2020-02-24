@@ -11,13 +11,36 @@
     text-align: center;
 }
 
-h1 {
+.invoiceform-text {
     padding-top: 30px;
     padding-bottom: 30px;
     color: midnightblue;
-
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .invoice-form {
     margin: 30px 80px 10px 80px;
+}
+
+.generate-invoice {
+    float: right;
+}
+
+@media screen and (min-width:300px ) and (max-width: 499px) {
+    .invoice-form {
+        margin: 15px 30px 5px 30px;
+    }
+    
+    .form-container {
+        margin: 2px 10px;
+    }
+
+    .invoiceform-text {
+        padding-top: 20px;
+    padding-bottom: 20px;
+    
+    font-size: 30px;
+    font-weight: bold;
+    }
 }

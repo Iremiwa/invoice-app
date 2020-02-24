@@ -27,11 +27,13 @@
  #signin-button{
      margin-left: -1px;
      margin-bottom: 10px;
+     text-decoration: none;
  }
  
  
  #signup{
      color: red;
+     text-decoration: none;
  }
  
  #signup:hover{
@@ -42,3 +44,35 @@
      margin-top: 20px;
      margin-bottom: 30px;
  }
+
+ @media screen and (min-width: 500px) and (max-width: 700px ) {
+    .signin-form {
+        width: 300px;
+     }
+
+     #continue-buttons{ 
+        margin-left: -1px;
+        width: 300px;
+    }
+ }
+
+
+ @media screen and (min-width: 300px) and (max-width: 499px ) {
+    .signin-form {
+        width: 200px;
+        padding: 10px 40px;
+     }
+
+     #continue-buttons{ 
+        margin-left: -1px;
+        width: 200px;
+        font-size: 10px;
+    }
+
+    .free-account {
+        font-size: 20px;
+        font-weight: bold;
+    }
+ }
+
+ 

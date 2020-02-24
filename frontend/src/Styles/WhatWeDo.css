@@ -16,7 +16,50 @@
     padding: 15px 2px;
 }
 
-h5 {
-    color: #8d969c;
+.text {
+    font-size: 50px;
+    color: midnightblue;
 }
 
+
+
+@media screen and (min-width: 575px) and (max-width: 979px) {
+    .card-deck {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .section-body {
+        margin-top: 30px; 
+    }
+
+    .text {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .card-section {
+        margin:3em 10em;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width:574px) {
+    
+    .card-deck {
+        width: 180px;
+    } 
+    
+    .section-body {
+        margin-top: 20px;
+        
+    }
+
+    .text {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .card-section {
+        margin:2em 10em;
+    }
+}

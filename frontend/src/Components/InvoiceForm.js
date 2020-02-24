@@ -10,7 +10,7 @@ const InvoiceForm = (props) => {
       <React.Fragment>
         <div className="form-container">
           <div className = "header">
-           <h1>Invoice Form</h1>
+           <p className="invoiceform-text">Invoice Form</p>
           </div>
           
 
@@ -28,6 +28,7 @@ const InvoiceForm = (props) => {
                       className="form-control"
                       placeholder="Invoice No"
                       name="invoiceNo"
+                      
                       onChange={props.onChange}
                     />
                   </div>
@@ -40,6 +41,7 @@ const InvoiceForm = (props) => {
                   type="text"
                   className="form-control"
                   name="name"
+                  
                   onChange={props.onChange}
                 />
               </div>
@@ -56,8 +58,10 @@ const InvoiceForm = (props) => {
             </div>
 
             <hr />
+ 
 
-            <table className="table">
+            <table className="table table-responsive">
+              
               <thead>
                 <tr>
                   <th scope="col">DESCRIPTION</th>
@@ -68,14 +72,14 @@ const InvoiceForm = (props) => {
                   <th scope="col">ACTION</th>
                 </tr>
               </thead>
+              
+              
               <tbody>
                 <tr>
                   <td>
-                    <textarea
+                    <input type="text"
                       className="form-control"
                       name="description"
-    
-                      rows="3"
                       placeholder="Item Description"
                       name="itemDescription"
                       onChange={props.onChange}
@@ -127,18 +131,20 @@ const InvoiceForm = (props) => {
                   </td>
                 </tr>
               </tbody>
+              
             </table>
-
+            
             <button
               type="button"
               className="btn btn-primary"
+              onClick={props.newRow}
             >
               +New Item
             </button>
 
             <button
               type="button"
-              className="btn btn-primary"
+              className="btn btn-primary generate-invoice"
               onClick = {props.generatePdf}
             >
               Generate Invoice

@@ -16,21 +16,21 @@ function Navbar() {
                     <ul className="navbar-nav mr-auto">
                     <Link to="howItWorks" spy={true} smooth={true} offset={-70} duration={500}>
                         <li className="nav-item ">
-                            <a className="nav-link">How It Works</a>
+                            <a href="#" className="nav-link">How It Works</a>
                         </li>
                     </Link>
                     <Link to="testimonials" spy={true} smooth={true} offset={-70} duration={700}>
                         <li className="nav-item ">
-                            <a className="nav-link" >Testimonials</a>
+                            <a href="#" className="nav-link" >Testimonials</a>
                         </li>
                     </Link>
                     <Link to="signUpForm" spy={true} smooth={true} offset={-70} duration={1000}>
                     <li className="nav-item ">
-                        <a className="nav-link">SignUp</a>
+                        <a href="#" className="nav-link">SignUp</a>
                     </li>
                     </Link>
                     <li className="nav-item">
-                        <a className="nav-link">SignIn <span className="sr-only">(current)</span></a>
+                        <a href="#" className="nav-link">SignIn <span className="sr-only">(current)</span></a>
                     </li>
                     
                     

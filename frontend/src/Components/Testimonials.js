@@ -24,25 +24,21 @@ class Testimonials extends React.Component {
               />
               <div className="card-body">
                 <h5 className="card-title">
-                  Card title that wraps to a new line
+                  Mr. Adeoye, CEO ABC ltd.
                 </h5>
                 <p className="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Instabill has made the billing process of my company easy, fast and seamless. I will highly recommend this application for SMEs.
                 </p>
               </div>
             </div>
             <div className="card p-3">
               <blockquote className="blockquote mb-0 card-body">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer posuere erat a ante.
+                  This application has been a game changer for my business. It eliminates the stress of dealing with paper invoices. Big ups to the Instabill Team.
                 </p>
                 <footer className="blockquote-footer">
                   <small className="text-muted">
-                    Someone famous in{" "}
-                    <cite title="Source Title">Source Title</cite>
+                    Orji Michael, Creative Director Indigo Studios.
                   </small>
                 </footer>
               </blockquote>
@@ -54,13 +50,9 @@ class Testimonials extends React.Component {
                 alt="Our client"
               />
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Awe Christiana</h5>
                 <p className="card-text">
-                  This card has supporting text below as a natural lead-in to
-                  additional content.
-                </p>
-                <p className="card-text">
-                  <small className="text-muted">Last updated 3 mins ago</small>
+                  As an entrepreneur I always look out for ways I can get some tasks off my hands so I can focus on the business aspect. Instabill has offered an easy solution to billing my clients without hassle. This is amazing. 
                 </p>
               </div>
             </div>

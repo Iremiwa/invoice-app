@@ -9,8 +9,8 @@ class WhatWeDo extends React.Component{
 
                 
                     <div className = "section-body">
-                        <h1>How Instabill Works</h1>
-                        <h5>We offer a free, simple and secure way to bill your clients </h5>
+                        <p className="text">How Instabill Works</p>
+                        <p>We offer a free, simple and secure way to bill your clients </p>
                     </div>
                     <div className = "card-section">
                         <div className="card-deck">
