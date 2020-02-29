@@ -3,10 +3,11 @@
     padding: 0;
     border-radius: 10px;
     margin: 2% 15%;
+    height: 100%;
 }
 
 .header {
-    background-color: dodgerblue;
+    background-color: whitesmoke;
     border-radius: 10px;
     text-align: center;
 }
@@ -19,12 +20,46 @@
     font-weight: bold;
 }
 
+.item {
+    width: 380px;
+}
+
+.item-quantity {
+    width: 90px;
+}
+
+.item-price {
+    width: 90px;
+}
+
+.total-price {
+    width: 120px;
+}
+
+.delete {
+    width: 100px;
+}
+
+th {
+    text-align: center;
+}
+
 .invoice-form {
     margin: 30px 80px 10px 80px;
 }
 
 .generate-invoice {
     float: right;
+}
+
+.add-item-button {
+    margin-left: 9%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.create-pdf-button {
+    margin-left: 8.8%;
 }
 
 @media screen and (min-width:300px ) and (max-width: 499px) {

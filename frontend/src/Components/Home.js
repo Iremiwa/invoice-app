@@ -9,6 +9,8 @@ import InvoiceMaker1 from "../Images/InvoiceMaker1.png";
 import { Link } from "react-router-dom";
 import ScrollToTop from "react-scroll-up";
 import scrollUp2 from "../Images/scrollUp2.png";
+import { IoIosArrowDropup } from "react-icons/io";
+import { IconContext } from 'react-icons';
 
 
 class Home extends Component {
@@ -45,12 +47,9 @@ class Home extends Component {
 
         <ScrollToTop showUnder={0} duration={1000} >
     <button>
-        <img src={scrollUp2} style={{
-          
-          marginRight: "10px",
-          height: "50px",
-          
-        }} />
+      <IconContext.Provider value={{ background: "transparent", border: "none", className: "global-class-name" }}>
+        <IoIosArrowDropup className="scroll-up-icon"/>
+        </IconContext.Provider>
     </button>
 </ScrollToTop>
         

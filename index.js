@@ -30,6 +30,7 @@ app.post('/generatepdf', (req, res) => {
     pdf.create(pdfTemplate(req.body), {}).toFile('invoice.pdf', (err) => {
         if(err) {
             res.send(Promise.reject());
+            console.log(res.body);
         }
         else {
             res.send(Promise.resolve());

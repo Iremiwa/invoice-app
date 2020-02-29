@@ -30,6 +30,11 @@ body {
     line-height: normal;
 }
 
+.scroll-up-icon {
+    font-size: 40px;
+    background: transparent;
+}
+
 @media screen and (max-width: 991px) {
     .head-text {
         font-size: 25px;

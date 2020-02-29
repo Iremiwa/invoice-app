@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 import { Route} from 'react-router-dom';
 import Home from './Components/Home';
-import FreeInvoice from './Components/FreeInvoice';
+import Invoice from './Components/Invoice';
 
 class App extends Component {
     
@@ -10,7 +10,7 @@ class App extends Component {
         return ( 
             <Router>
                 <Route path="/" exact component= {Home} />
-                <Route path="/free-invoice"  component= {FreeInvoice} />
+                <Route path="/free-invoice"  component= {Invoice} />
             </Router>
          );
     }

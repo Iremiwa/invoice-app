@@ -1,0 +1,23 @@
+import React from "react";
+import "../../Styles/FreeInvoice.css";
+
+export default props => {
+  const bodyRef = React.createRef();
+  const createPdf = () => props.createPdf(bodyRef.current);
+  return (
+    <section className="pdf-container">
+      <section className="pdf-toolbar">
+        <button
+          type="button"
+          className="btn btn-primary create-pdf-button"
+          onClick={createPdf}
+        >
+          Generate PDF
+        </button>
+      </section>
+      <section className="pdf-body" ref={bodyRef}>
+        {props.children}
+      </section>
+    </section>
+  );
+};
